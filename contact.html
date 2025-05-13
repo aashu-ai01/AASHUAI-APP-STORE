@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AASHUAI APP STORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nature-tech-elements">
+        <div class="nature-tech-element"></div>
+        <div class="nature-tech-element"></div>
+        <div class="nature-tech-element"></div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-top">
+            <div class="nav-brand">
+                <div class="logo-circuit"></div>
+                <span class="gradient-text">AASHU</span>
+            </div>
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-middle">
+            <div class="nav-search">
+                <input type="text" placeholder="Search apps...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="publish.html">Publish</a>
+                <a href="developers.html">Developers</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="floating-diyas">
+            <div class="diya">🪔</div>
+            <div class="diya">🪔</div>
+            <div class="diya">🪔</div>
+        </div>
+
+        <section class="contact-hero">
+            <div class="mandala-background"></div>
+            <h1>Contact Us</h1>
+            <p>We're here to help you succeed</p>
+            <div class="rangoli-divider"></div>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm" onsubmit="return handleSubmit(event)">
+                        <h3>Send us a Message</h3>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   placeholder="Enter your name"
+                                   autocomplete="name"
+                                   minlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="Enter your email"
+                                   autocomplete="email"
+                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                   placeholder="Enter message subject"
+                                   minlength="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                    placeholder="Type your message here..."
+                                    minlength="10"></textarea>
+                        </div>
+                        <button type="submit" class="action-button primary send-button" id="submitButton">
+                            <div class="button-content">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <div class="button-effect"></div>
+                        </button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <button class="info-card" onclick="showLocation()">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Our Location</h4>
+                        <p>KD Chowk, Bagauch Ghat</p>
+                        <p>Deoria, Uttar Pradesh</p>
+                        <p>274404</p>
+                    </button>
+                    <button class="info-card" onclick="emailUs()">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>adityakumarbalajibalaji@gmail.com</p>
+                    </button>
+                    <button class="info-card" onclick="showHours()">
+                        <i class="fas fa-clock"></i>
+                        <h4>Working Hours</h4>
+                        <p>24/7 - Always Available</p>
+                        <p>Customer Support</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-connect">
+            <h2>Connect With Us</h2>
+            <div class="social-icons">
+                <button class="social-button" onclick="window.open('#', '_blank')">
+                    <i class="fab fa-facebook"></i>
+                </button>
+                <button class="social-button" onclick="window.open('#', '_blank')">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button class="social-button" onclick="window.open('#', '_blank')">
+                    <i class="fab fa-instagram"></i>
+                </button>
+                <button class="social-button" onclick="window.open('#', '_blank')">
+                    <i class="fab fa-linkedin"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AASHUAI APP STORE</h3>
+                <p>Your trusted platform for apps</p>
+                <div class="made-in-india">
+                    <span>🇮🇳</span>
+                    <p>Made with pride in India</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <button class="footer-button" onclick="location.href='index.html'">Home</button>
+                <button class="footer-button" onclick="location.href='publish.html'">Publish</button>
+                <button class="footer-button" onclick="location.href='developers.html'">Developers</button>
+                <button class="footer-button" onclick="location.href='contact.html'">Contact</button>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <button class="social-button" onclick="window.open('#', '_blank')">
+                        <i class="fab fa-facebook"></i>
+                    </button>
+                    <button class="social-button" onclick="window.open('#', '_blank')">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="social-button" onclick="window.open('#', '_blank')">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AASHUAI APP STORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showLocation() {
+            window.open('https://maps.google.com/search/?q=KD+Chowk+Bagauch+Ghat+Deoria+Uttar+Pradesh+274404', '_blank');
+        }
+        
+        function emailUs() {
+            window.location.href = 'mailto:adityakumarbalajibalaji@gmail.com';
+        }
+        
+        function showHours() {
+            alert('We are available 24/7 for customer support!');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const submitButton = document.getElementById('submitButton');
+            const formStatus = document.getElementById('formStatus');
+            const form = document.getElementById('contactForm');
+            
+            submitButton.disabled = true;
+            submitButton.querySelector('.button-content span').textContent = 'Sending...';
+            
+            setTimeout(() => {
+                formStatus.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i> Message sent successfully!</div>';
+                form.reset();
+                submitButton.disabled = false;
+                submitButton.querySelector('.button-content span').textContent = 'Send Message';
+                
+                setTimeout(() => {
+                    formStatus.innerHTML = '';
+                }, 5000);
+            }, 1500);
+
+            return false;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.info-card, .send-button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('touchstart', function() {
+                    this.classList.add('touch-active');
+                });
+                
+                button.addEventListener('touchend', function() {
+                    this.classList.remove('touch-active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
