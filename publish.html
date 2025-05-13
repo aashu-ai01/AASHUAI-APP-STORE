@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish Your App - AASHUAI APP STORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nature-tech-elements">
+        <div class="nature-tech-element"></div>
+        <div class="nature-tech-element"></div>
+        <div class="nature-tech-element"></div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-top">
+            <div class="nav-brand">
+                <div class="logo-circuit"></div>
+                <span class="gradient-text">AASHU</span>
+            </div>
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-middle">
+            <div class="nav-search">
+                <input type="text" placeholder="Search apps...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="publish.html" class="active">Publish</a>
+                <a href="developers.html">Developers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="publish-section">
+            <div class="section-header">
+                <h1>Publish Your App</h1>
+                <p>Share your creation with millions of users</p>
+            </div>
+
+            <div class="publish-content">
+                <form class="publish-form">
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h3>App Information</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="appName">App Name</label>
+                            <input type="text" id="appName" name="appName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appCategory">Category</label>
+                            <select id="appCategory" name="appCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="games">Games & Entertainment</option>
+                                <option value="education">Education & Learning</option>
+                                <option value="business">Business & Finance</option>
+                                <option value="lifestyle">Lifestyle & Health</option>
+                                <option value="social">Social & Communication</option>
+                                <option value="utility">Utility & Tools</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="appDescription">Description</label>
+                            <textarea id="appDescription" name="appDescription" rows="4" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h3>App Assets</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="appIcon">App Icon (512x512 PNG)</label>
+                            <button type="button" class="file-upload-btn" onclick="document.getElementById('appIcon').click()">
+                                <i class="fas fa-upload"></i>
+                                Choose Icon
+                            </button>
+                            <input type="file" id="appIcon" name="appIcon" accept="image/png" required class="file-input" hidden>
+                            <span id="iconFileName" class="file-name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="appScreenshots">Screenshots (up to 5)</label>
+                            <button type="button" class="file-upload-btn" onclick="document.getElementById('appScreenshots').click()">
+                                <i class="fas fa-images"></i>
+                                Choose Screenshots
+                            </button>
+                            <input type="file" id="appScreenshots" name="appScreenshots" accept="image/*" multiple required class="file-input" hidden>
+                            <span id="screenshotsCount" class="file-name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="appApk">APK File</label>
+                            <button type="button" class="file-upload-btn" onclick="document.getElementById('appApk').click()">
+                                <i class="fas fa-file-archive"></i>
+                                Choose APK
+                            </button>
+                            <input type="file" id="appApk" name="appApk" accept=".apk" required class="file-input" hidden>
+                            <span id="apkFileName" class="file-name"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h3>Pricing & Distribution</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="appPrice">Price ($)</label>
+                            <input type="number" id="appPrice" name="appPrice" min="0" step="0.01" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label>App Type</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="appType" value="free" checked>
+                                    Free
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="appType" value="paid">
+                                    Paid
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="appRegions">Available Regions</label>
+                            <select id="appRegions" name="appRegions" multiple required>
+                                <option value="global">Global</option>
+                                <option value="asia">Asia</option>
+                                <option value="europe">Europe</option>
+                                <option value="namerica">North America</option>
+                                <option value="samerica">South America</option>
+                                <option value="africa">Africa</option>
+                                <option value="oceania">Oceania</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="action-button primary">
+                        <i class="fas fa-upload"></i>
+                        Submit App
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AASHUAI APP STORE</h3>
+                <p>Your trusted platform for apps</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <button class="footer-button" onclick="location.href='index.html'">Home</button>
+                <button class="footer-button" onclick="location.href='publish.html'">Publish</button>
+                <button class="footer-button" onclick="location.href='developers.html'">Developers</button>
+                <button class="footer-button" onclick="location.href='contact.html'">Contact</button>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <button class="social-button" onclick="window.open('#', '_blank')">
+                        <i class="fab fa-facebook"></i>
+                    </button>
+                    <button class="social-button" onclick="window.open('#', '_blank')">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="social-button" onclick="window.open('#', '_blank')">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AASHUAI APP STORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // File upload preview
+        document.getElementById('appIcon').addEventListener('change', function() {
+            document.getElementById('iconFileName').textContent = this.files[0] ? this.files[0].name : '';
+        });
+
+        document.getElementById('appScreenshots').addEventListener('change', function() {
+            document.getElementById('screenshotsCount').textContent = this.files.length + ' files selected';
+        });
+
+        document.getElementById('appApk').addEventListener('change', function() {
+            document.getElementById('apkFileName').textContent = this.files[0] ? this.files[0].name : '';
+        });
+
+        // Form submission
+        document.querySelector('.publish-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html> 
